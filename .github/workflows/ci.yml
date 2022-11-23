@@ -22,7 +22,7 @@ jobs:
     - name: Prepare
       run: |
           apt-get update
-          apt-get install git-lfs
+          apt-get install -y git-lfs clang-tidy
     - name: Configure git to trust the workspace despite the different owner
       run: |
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
